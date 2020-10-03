@@ -1,4 +1,4 @@
-//La nueva Card esta en la linea 131, y es mi juego Favorito
+//La nueva Card esta en la linea 149, y es uno de mis juegos Favoritos
 import 'package:flutter/material.dart';
 import 'package:android_intent/android_intent.dart';
 
@@ -11,6 +11,22 @@ void displayMapInGoogleMaps({int zoomLevel = 12}) {
       action: 'action_view',
       data: Uri.encodeFull('geo:-34.1330270,-71.5723272,4z=$zoomLevel'),
       package: 'com.google.android.apps.maps');
+  intent.launch();
+}
+
+void displayTwitter() {
+  final AndroidIntent intent = AndroidIntent(
+      action: 'action_view',
+      data: Uri.encodeFull('https://twitter.com/m1710pc'),
+      package: 'com.twitter.android');
+  intent.launch();
+}
+
+void opengoogle() {
+  final AndroidIntent intent = AndroidIntent(
+      action: 'action_view',
+      data: Uri.encodeFull('https://darksouls.fandom.com/es/wiki/Dark_Souls'),
+      package: 'com.android.chrome');
   intent.launch();
 }
 
@@ -90,22 +106,24 @@ class MyApp extends StatelessWidget {
                   horizontal: 25.0,
                 ),
                 child: ListTile(
-                  leading: Text(
-                    '@',
-                    style: TextStyle(
-                      color: Colors.green,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
+                    leading: Text(
+                      '@',
+                      style: TextStyle(
+                        color: Colors.green,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                  title: Text(
-                    'm1710pc',
-                    style: TextStyle(
-                      color: Colors.green,
-                      fontSize: 18.0,
+                    title: Text(
+                      'm1710pc',
+                      style: TextStyle(
+                        color: Colors.green,
+                        fontSize: 18.0,
+                      ),
                     ),
-                  ),
-                ),
+                    onTap: () {
+                      displayTwitter();
+                    }),
               ),
               Card(
                 margin: EdgeInsets.symmetric(
@@ -134,18 +152,20 @@ class MyApp extends StatelessWidget {
                   horizontal: 25.0,
                 ),
                 child: ListTile(
-                  leading: Icon(
-                    Icons.videogame_asset,
-                    color: Colors.green,
-                  ),
-                  title: Text(
-                    'Dark Souls',
-                    style: TextStyle(
+                    leading: Icon(
+                      Icons.videogame_asset,
                       color: Colors.green,
-                      fontSize: 18.0,
                     ),
-                  ),
-                ),
+                    title: Text(
+                      'Dark Souls',
+                      style: TextStyle(
+                        color: Colors.green,
+                        fontSize: 18.0,
+                      ),
+                    ),
+                    onTap: () {
+                      opengoogle();
+                    }),
               ),
             ],
           ),
