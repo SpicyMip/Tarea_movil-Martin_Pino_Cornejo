@@ -1,2 +1,2 @@
 # Tarea_movil-Martin_Pino_Cornejo
-Aqui esta mi tarea, logre configurar un boton, el del google maps, asi veran que tan en la nada vivo XD
+Aqui esta mi tarea, logre configurar algunos botones, como el del google maps, twitter y el nuevo que puse
