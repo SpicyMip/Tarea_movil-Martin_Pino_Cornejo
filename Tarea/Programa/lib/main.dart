@@ -146,6 +146,7 @@ class MyApp extends StatelessWidget {
                       displayMapInGoogleMaps();
                     }),
               ),
+              //Esta es la nueva card y al apretarla abre la wiki del juego
               Card(
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
